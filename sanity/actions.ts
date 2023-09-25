@@ -8,7 +8,7 @@ interface GetResourcesParams {
     page: string;
 }
 
-export const getResourcesPlaylist = async (params:GetResourcesParams) => {
+export const getResourcesPlaylist = async () => {
     try {
         const resources = await readClient.fetch(
             groq`*[_type == "resourcePlaylist"]{
